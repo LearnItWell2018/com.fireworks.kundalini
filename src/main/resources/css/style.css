@@ -7,6 +7,9 @@ html, body {
   stroke: blue;
 }
 
+.hidden {
+  display: none;
+}
 
 @keyframes moveTopRight {
   0% {
@@ -44,22 +47,73 @@ html, body {
   }
 }
 
+@keyframes moveOldCenter {
+  0% {
+    transform: translate( 200px, 200px);
+  }
+  100% {
+    transform: translate( 0px, 0px);
+  }
+}
+
+@keyframes moveMenCenter {
+  0% {
+    transform: translate( -200px, -200px);
+  }
+  100% {
+    transform: translate( 0px, 0px);
+  }
+}
+
+@keyframes moveWomenCenter {
+  0% {
+    transform: translate( 200px, -200px);
+  }
+  100% {
+    transform: translate( 0px, 0px);
+  }
+}
+
+@keyframes moveKidCenter {
+  0% {
+    transform: translate( -200px, 200px);
+  }
+  100% {
+    transform: translate( 0px, 0px);
+  }
+}
+
+
 .move-women {
   animation: moveTopRight 2s;
   animation-fill-mode: forwards;
 }
-
 .move-men {
   animation: moveTopLeft 2s;
   animation-fill-mode: forwards;
 }
-
 .move-kid {
   animation: moveBottomLeft 2s;
   animation-fill-mode: forwards;
 }
-
 .move-old {
   animation: moveBottomRight 2s;
+  animation-fill-mode: forwards;
+}
+
+.close-old {
+  animation: moveOldCenter 2s;
+  animation-fill-mode: forwards;
+}
+.close-kid {
+  animation: moveKidCenter 2s;
+  animation-fill-mode: forwards;
+}
+.close-men {
+  animation: moveMenCenter 2s;
+  animation-fill-mode: forwards;
+}
+.close-women {
+  animation: moveWomenCenter 2s;
   animation-fill-mode: forwards;
 }
