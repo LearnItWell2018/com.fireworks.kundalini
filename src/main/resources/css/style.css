@@ -1,0 +1,65 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.change {
+  stroke: blue;
+}
+
+
+@keyframes moveTopRight {
+  0% {
+    transform: translate( 20px, -20px);
+  }
+  100% {
+    transform: translate( 200px, -200px);
+  }
+}
+
+@keyframes moveTopLeft {
+  0% {
+    transform: translate( -20px, -20px);
+  }
+  100% {
+    transform: translate( -200px, -200px);
+  }
+}
+
+@keyframes moveBottomLeft {
+  0% {
+    transform: translate( -20px, 20px);
+  }
+  100% {
+    transform: translate( -200px, 200px);
+  }
+}
+
+@keyframes moveBottomRight {
+  0% {
+    transform: translate( 20px, 20px);
+  }
+  100% {
+    transform: translate( 200px, 200px);
+  }
+}
+
+.move-women {
+  animation: moveTopRight 2s;
+  animation-fill-mode: forwards;
+}
+
+.move-men {
+  animation: moveTopLeft 2s;
+  animation-fill-mode: forwards;
+}
+
+.move-kid {
+  animation: moveBottomLeft 2s;
+  animation-fill-mode: forwards;
+}
+
+.move-old {
+  animation: moveBottomRight 2s;
+  animation-fill-mode: forwards;
+}
