@@ -46,6 +46,12 @@ var scrolly = function(e) {
 }
 
 var init = function() {
+	
+  var node = document.createElement("div");
+  var textnode = document.createTextNode("This is a paragraph.");
+  node.appendChild(textnode);
+  document.getElementById("camera").appendChild(node);
+	
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
