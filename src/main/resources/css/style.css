@@ -11,6 +11,15 @@ html, body {
   display: none;
 }
 
+.bg {
+  background: url("../img/background_menu_o.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
 @keyframes moveTopRight {
   0% {
     transform: translate( 20px, -20px);
