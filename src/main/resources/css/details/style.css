@@ -278,5 +278,10 @@ ul {
     padding: 20px; 
     width: 200px;
     height: 150px; 
+    margin-top: 20px;
 } 
-
+.camerainner div{
+	diplay:inline;
+	float:left;
+	margin-left:20px;
+}
