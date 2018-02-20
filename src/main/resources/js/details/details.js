@@ -102,9 +102,9 @@ var scrolly = function(e) {
 }
 
 var init = function() {
-  addTypeItem (document.getElementById("lightning"));
-  addTypeItem (document.getElementById("music"));
-  addTypeItem (document.getElementById("planes"));
+  addTypeItem (document.getElementById("lightning"), 10);
+  addTypeItem (document.getElementById("music"), 15);
+  addTypeItem (document.getElementById("planes"), 40);
   
   for (var i = 0; i < itemList.itemTypeList.length; i++) {
 	    var item = itemList.itemTypeList[i];
