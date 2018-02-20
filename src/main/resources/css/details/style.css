@@ -285,3 +285,8 @@ ul {
 	float:left;
 	margin-left:20px;
 }
+
+.image {
+	width: 200px;
+    height: 60px; 
+}
