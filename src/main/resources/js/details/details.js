@@ -4,6 +4,62 @@ var doc = $(document);
 var l = $('.scrolly');
 var panel = $('.panel');
 var vh = $(window).height();
+var itemList = {
+		"itemTypeList": [
+		    {
+		        "item_name": "dsd",
+		        "item_price": "60",
+		        "item_stock": "sds"
+		    },
+		    {
+		        "item_name": "gdg",
+		        "item_price": "70",
+		        "item_stock": "ds"
+		    },
+		    {
+		        "item_name": "sdsData",
+		        "item_price": "80",
+		        "item_stock": "   dd       "
+		    },
+		    {
+		        "item_name": "Stoc final",
+		        "item_price": "90",
+		        "item_stock": "litri     "
+		    },
+		    {
+		        "item_name": "Consum GPL",
+		        "item_price": "100",
+		        "item_stock": "litri     "
+		    },
+		    {
+		        "item_name": "sdg",
+		        "item_price": "20",
+		        "item_stock": "gfgd"
+		    },
+		    {
+		        "item_name": "dfgd",
+		        "item_price": "10",
+		        "item_stock": "liggtggggri     "
+		    },
+		    {
+		        "item_name": "fgd",
+		        "item_price": "40",
+		        "item_stock": "kwfgf       "
+		    },
+		    {
+		        "item_name": "dfg",
+		        "item_price": "55",
+		        "item_stock": "dg"
+		    },
+		    {
+		        "item_name": "gd",
+		        "item_price": "68",
+		        "item_stock": "dfg"
+		    }
+
+		    ]
+		};
+
 
 var openMenu = function() {
   burger.classList.toggle('burger--active');
@@ -46,16 +102,41 @@ var scrolly = function(e) {
 }
 
 var init = function() {
-	
-  var node = document.createElement("div");
-  var textnode = document.createTextNode("This is a paragraph.");
-  node.appendChild(textnode);
-  document.getElementById("camera").appendChild(node);
-	
+  addTypeItem (document.getElementById("lightning"));
+  addTypeItem (document.getElementById("music"));
+  addTypeItem (document.getElementById("planes"));
+  
+  for (var i = 0; i < itemList.itemTypeList.length; i++) {
+	    var item = itemList.itemTypeList[i];
+	    console.log(item.item_name);
+	    addTypeItem (document.getElementById("camera"), item.item_price);
+  }
+  
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
   window.addEventListener('load', scrollFx, false);
   $('a[href^="#"]').on('click',scrolly);
 };
+
+function addTypeItem (element, priceTag) {
+	  var nodeDiv = document.createElement("div");
+	  var nodeButton = document.createElement("button");
+	  var nodePrice = document.createElement("i");
+	  var textnode = document.createTextNode("This is a paragraph.");
+	  var textPrice = document.createTextNode(priceTag);
+	  var attDiv = document.createAttribute("class");
+	  attDiv.value = "rcorners";
+	  var attPrice = document.createAttribute("class");
+	  attPrice.value = "fa fa-inr";
+	  nodeButton.append("Add to cart");
+	  nodeDiv.setAttributeNode(attDiv);
+	  nodePrice.setAttributeNode(attPrice);
+	  nodePrice.appendChild(textPrice);
+	  nodeDiv.appendChild(textnode);
+	  nodeDiv.appendChild(nodePrice);
+	  nodeDiv.appendChild(nodeButton);
+	  element.appendChild(nodeDiv);
+}
+
 
 doc.on('ready', init);
