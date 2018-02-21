@@ -111,6 +111,8 @@ var init = function() {
 	    console.log(item.item_name);
 	    addTypeItem (document.getElementById("camera"), item.item_price);
   }
+  var myJSON = JSON.stringify(itemList);
+  console.log(myJSON);
   
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
@@ -132,6 +134,8 @@ function addTypeItem (element, priceTag) {
 	  attPrice.value = "fa fa-inr";
 	  var attCart = document.createAttribute("class");
 	  attCart.value = "fa fa-shopping-cart";
+	  var attOnClick = document.createAttribute("onclick");
+	  attOnClick.value = "addToCart()";
 	  var attImageSource = document.createAttribute("src");
 	  attImageSource.value = "../img/items/butterfly.PNG";
 	  var attImageSize = document.createAttribute("class");
@@ -139,6 +143,7 @@ function addTypeItem (element, priceTag) {
 	  image.setAttributeNode(attImageSource);
 	  image.setAttributeNode(attImageSize);
 	  nodeButton.setAttributeNode(attCart);
+	  nodeButton.setAttributeNode(attOnClick);
 	  nodeDiv.setAttributeNode(attDiv);
 	  nodePrice.setAttributeNode(attPrice);
 	  nodePrice.appendChild(textPrice);
@@ -147,6 +152,10 @@ function addTypeItem (element, priceTag) {
 	  nodeDiv.appendChild(nodePrice);
 	  nodeDiv.appendChild(nodeButton);
 	  element.appendChild(nodeDiv);
+}
+
+function addToCart() {
+	alert("Added in Cart");
 }
 
 
