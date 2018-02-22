@@ -164,6 +164,7 @@ function addToCart() {
 		var obj = JSON.parse(jsonStr);
 		obj['theTeam'].push({"teamId":"4","status":"pending"});
 		jsonStr = JSON.stringify(obj);
+		https://stackoverflow.com/questions/18884840/adding-a-new-array-element-to-a-json-object
 }
 */
 
