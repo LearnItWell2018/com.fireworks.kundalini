@@ -158,5 +158,45 @@ function addToCart() {
 	alert("Added in Cart");
 }
 
+/*function addOrRemoveFromJSONCartList (jsonCartList, addOrRemove) {}
+		var jsonStr = '{"theTeam":[{"teamId":"1","status":"pending"},{"teamId":"2","status":"member"},{"teamId":"3","status":"member"}]}';
+		
+		var obj = JSON.parse(jsonStr);
+		obj['theTeam'].push({"teamId":"4","status":"pending"});
+		jsonStr = JSON.stringify(obj);
+}
+*/
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    var user=getCookie("kundalini");
+    if (user != "") {
+        alert("Welcome again " + user);
+    } else {
+        setCookie("kundalini", user, 1);
+    }
+}
 
 doc.on('ready', init);
