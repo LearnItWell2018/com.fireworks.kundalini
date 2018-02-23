@@ -1,91 +1,41 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/cart.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="../js/cart.js"></script>
+<script src="../js/jquery.min.js"></script>
 </head>
-<div class="shopping-cart">
-	<!-- Title -->
-	<div class="title">Shopping Bag</div>
+<body onload="init()">
+	<div id="cart_items" class="shopping-cart">
 
-	<!-- Product #1 -->
-	<div class="item">
-		<div class="buttons">
-			<span class="delete-btn"></span> <span class="like-btn"></span>
+		<div class="title">Shopping Bag</div>
+
+		<div class="item">
+			<div>
+				<button class="fa fa-cart-arrow-down" type="button" name="button">
+				</button>
+			</div>
+
+			<div class="image">
+				<img src="../img/items/butterfly.PNG" alt="" />
+			</div>
+
+			<div class="description">
+				<span>Common Projects</span> <span>Bball High</span> <span>White</span>
+			</div>
+
+			<div class="quantity">
+				<button class="fa fa-plus" type="button" name="button"></button>
+				<input type="text" name="name" value="1">
+				<button class="fa fa-minus" type="button" name="button"></button>
+			</div>
+
+			<div>
+				<i class="fa fa-inr"></i>549
+			</div>
 		</div>
 
-		<div class="image">
-			<img src="../images/iitem-1.png" alt="" />
-		</div>
-
-		<div class="description">
-			<span>Common Projects</span> <span>Bball High</span> <span>White</span>
-		</div>
-
-		<div class="quantity">
-			<button class="plus-btn" type="button" name="button">
-				<img src="plus.svg" alt="" />
-			</button>
-			<input type="text" name="name" value="1">
-			<button class="minus-btn" type="button" name="button">
-				<img src="minus.svg" alt="" />
-			</button>
-		</div>
-
-		<div class="total-price">$549</div>
 	</div>
-
-	<!-- Product #2 -->
-	<div class="item">
-		<div class="buttons">
-			<span class="delete-btn"></span> <span class="like-btn"></span>
-		</div>
-
-		<div class="image">
-			<img src="../images/iitem-2.png" alt="" />
-		</div>
-
-		<div class="description">
-			<span>Maison Margiela</span> <span>Future Sneakers</span> <span>White</span>
-		</div>
-
-		<div class="quantity">
-			<button class="plus-btn" type="button" name="button">
-				<img src="plus.svg" alt="" />
-			</button>
-			<input type="text" name="name" value="1">
-			<button class="minus-btn" type="button" name="button">
-				<img src="minus.svg" alt="" />
-			</button>
-		</div>
-
-		<div class="total-price">$870</div>
-	</div>
-
-	<!-- Product #3 -->
-	<div class="item">
-		<div class="buttons">
-			<span class="delete-btn"></span> <span class="like-btn"></span>
-		</div>
-
-		<div class="image">
-			<img src="../images/iitem-3.jpg" alt="" />
-		</div>
-
-		<div class="description">
-			<span>Our Legacy</span> <span>Brushed Scarf</span> <span>Brown</span>
-		</div>
-
-		<div class="quantity">
-			<button class="plus-btn" type="button" name="button">
-				<img src="plus.svg" alt="" />
-			</button>
-			<input type="text" name="name" value="1">
-			<button class="minus-btn" type="button" name="button">
-				<img src="minus.svg" alt="" />
-			</button>
-		</div>
-
-		<div class="total-price">$349</div>
-	</div>
-</div>
+</body>
 </html>

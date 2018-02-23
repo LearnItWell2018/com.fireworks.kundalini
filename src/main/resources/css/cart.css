@@ -76,11 +76,10 @@ button:focus,
 input:focus {
   outline:0;
 }
-.image {
-  margin-right: 50px;
+img {
+  width: 100px;
+  height: 100px;
 }
- 
-Let’s add some basic style to  product name and description.
 .description {
   padding-top: 10px;
   margin-right: 60px;
