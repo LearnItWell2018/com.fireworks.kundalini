@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+.right {
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: slideRight;
+    -webkit-animation-duration: 4s;
+    animation-name: slideRight;
+    animation-duration: 4s;
+}
+
+@keyframes slideRight {
+    0%   {background-color:red; right:80%; top:0px; width:20%;}
+    25%  {background-color:yellow; right:75%; top:0px; width:25%;}
+    50%  {background-color:blue; right:50%; top:0px; width:50%;}
+    75%  {background-color:green; right:25%; top:0px; width:75%;}
+    100% {background-color:red; right:0%; top:0px; width:100%;}
+}
+
+.move-right {
+  animation: slideRight 2s;
+  animation-fill-mode: forwards;
+}
+
+.left {
+    height: 100px;
+	width:100%;
+    background-color: yellow;
+    position: relative;
+    -webkit-animation-name: slideLeft; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: slideRight;
+    animation-duration: 4s;
+}
+
+/* Standard syntax */
+@keyframes slideLeft {
+    0%   {background-color:black; left:80%; top:0px; }
+    25%  {background-color:blue; left:75%; top:0px; }
+    50%  {background-color:yellow; left:50%; top:0px; }
+    75%  {background-color:pink; left:20%; top:0px; }
+    100% {background-color:black; left:0%; top:0px;}
+}
+
+.move-left {
+  animation: slideLeft 2s;
+  animation-fill-mode: forwards;
+}
+.fillit {
+	hight: 100%;
+	width: 100%;
+}
+.singleDiv {
+	display:block;
+	overflow:auto;
+}
+</style>
+</head>
+<body>
+<div class="fillit">
+	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
+	<div class="move-left left singleDiv" style="text-align:center;font-size:48px;color:white">Min 500 rupee order<i class="fa fa-space-shuttle" style="font-size:48px;color:white"></i></div>
+	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">Super easy return policy<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
+	<div class="move-left left singleDiv" style="text-align:center;font-size:48px;color:white">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:white"></i></div>
+	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
+	<div class="move-left left singleDiv" style="text-align:center;font-size:48px;color:white">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:white"></i></div>
+	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
+	<div class="move-left left singleDiv" style="text-align:center;font-size:48px;color:white">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:white"></i></div>
+	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
+	<div class="move-left left singleDiv" style="text-align:center;font-size:48px;color:white">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:white"></i></div>
+</div>
+</body>
+</html>
