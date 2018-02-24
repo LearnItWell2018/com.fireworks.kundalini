@@ -4,62 +4,253 @@ var doc = $(document);
 var l = $('.scrolly');
 var panel = $('.panel');
 var vh = $(window).height();
-var itemList = {
+var itemListMenu1 = {"itemName" : "POTS",
 		"itemTypeList": [
-		    {
-		        "item_name": "dsd",
-		        "item_price": "60",
-		        "item_stock": "sds"
-		    },
-		    {
-		        "item_name": "gdg",
-		        "item_price": "70",
-		        "item_stock": "ds"
-		    },
-		    {
-		        "item_name": "sdsData",
-		        "item_price": "80",
-		        "item_stock": "   dd       "
-		    },
-		    {
-		        "item_name": "Stoc final",
-		        "item_price": "90",
-		        "item_stock": "litri     "
-		    },
-		    {
-		        "item_name": "Consum GPL",
-		        "item_price": "100",
-		        "item_stock": "litri     "
-		    },
-		    {
-		        "item_name": "sdg",
-		        "item_price": "20",
-		        "item_stock": "gfgd"
-		    },
-		    {
-		        "item_name": "dfgd",
-		        "item_price": "10",
-		        "item_stock": "liggtggggri     "
-		    },
-		    {
-		        "item_name": "fgd",
-		        "item_price": "40",
-		        "item_stock": "kwfgf       "
-		    },
-		    {
-		        "item_name": "dfg",
-		        "item_price": "55",
-		        "item_stock": "dg"
-		    },
-		    {
-		        "item_name": "gd",
-		        "item_price": "68",
-		        "item_stock": "dfg"
-		    }
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			}
 
 		    ]
 		};
 
+var itemListMenu2 = {"itemName" : "SPARKELS",
+		"itemTypeList": [
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			}
+
+		    ]
+		};
+
+var itemListMenu3 = {"itemName" : "CRACKERS",
+		"itemTypeList": [
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			}
+
+		    ]
+		};
+
+var itemListMenu4 = {"itemName" : "SHELLS",
+		"itemTypeList": [
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			},
+			{
+				"product_id" : "POTS-001",
+				"brand" : "SIVKASHI",
+				"item_name": "Red POTS",
+				"item_price": "sds",
+				"item_stock": "sds"
+			}
+
+		    ]
+		};
 
 var openMenu = function() {
   burger.classList.toggle('burger--active');
@@ -102,17 +293,29 @@ var scrolly = function(e) {
 }
 
 var init = function() {
-  addTypeItem (document.getElementById("lightning"), 10);
-  addTypeItem (document.getElementById("music"), 15);
-  addTypeItem (document.getElementById("planes"), 40);
   
-  for (var i = 0; i < itemList.itemTypeList.length; i++) {
-	    var item = itemList.itemTypeList[i];
+  for (var i = 0; i < itemListMenu1.itemTypeList.length; i++) {
+	    var item = itemListMenu1.itemTypeList[i];
 	    console.log(item.item_name);
-	    addTypeItem (document.getElementById("camera"), item.item_price);
+	    addTypeItem (document.getElementById("camera"), item.product_id, item.item_price);
   }
-  var myJSON = JSON.stringify(itemList);
-  console.log(myJSON);
+  for (var i = 0; i < itemListMenu2.itemTypeList.length; i++) {
+	    var item = itemListMenu2.itemTypeList[i];
+	    console.log(item.item_name);
+	    addTypeItem (document.getElementById("lightning"), item.product_id, item.item_price);
+  }
+  for (var i = 0; i < itemListMenu3.itemTypeList.length; i++) {
+	    var item = itemListMenu3.itemTypeList[i];
+	    console.log(item.item_name);
+	    addTypeItem (document.getElementById("music"), item.product_id, item.item_price);
+  }
+  for (var i = 0; i < itemListMenu4.itemTypeList.length; i++) {
+	    var item = itemListMenu4.itemTypeList[i];
+	    console.log(item.item_name);
+	    addTypeItem (document.getElementById("planes"), item.product_id, item.item_price);
+  }
+  /*var myJSON = JSON.stringify(itemListMenu1);
+  console.log(myJSON);*/
   
   burger.addEventListener('click', openMenu, false);
   window.addEventListener('scroll', scrollFx, false);
@@ -120,11 +323,10 @@ var init = function() {
   $('a[href^="#"]').on('click',scrolly);
 };
 
-function addTypeItem (element, priceTag) {
+function addTypeItem (element, productId, priceTag) {
 	  var nodeDiv = document.createElement("div");
 	  var nodeButton = document.createElement("button");
 	  var nodePrice = document.createElement("i");
-	  var nodeCart = document.createElement("i");
 	  var image = document.createElement("img");
 	  var textnode = document.createTextNode("This is a paragraph.");
 	  var textPrice = document.createTextNode(priceTag);
@@ -135,7 +337,7 @@ function addTypeItem (element, priceTag) {
 	  var attCart = document.createAttribute("class");
 	  attCart.value = "fa fa-shopping-cart";
 	  var attOnClick = document.createAttribute("onclick");
-	  attOnClick.value = "addToCart()";
+	  attOnClick.value = "addToCart('" + productId + "')";
 	  var attImageSource = document.createAttribute("src");
 	  attImageSource.value = "/kundalini/img/items/butterfly.PNG";
 	  var attImageSize = document.createAttribute("class");
@@ -154,21 +356,22 @@ function addTypeItem (element, priceTag) {
 	  element.appendChild(nodeDiv);
 }
 
-function addToCart() {
-	setCookie("kundalini", "content", 1);
-	alert("kundalini is set");
-	alert(getCookie("kundalini"));
+function addToCart(productId) {
+	var user=getCookie("kundalini_cart_list");
+    if (user != "") {
+    	var obj = JSON.parse(user);
+    	var newItem = '{"productId": "' + productId + '"}';
+		obj['Cart'].push(JSON.parse(newItem));
+		setCookie("kundalini_cart_list", JSON.stringify(obj), 1);
+    } else {
+    	var jsonStr = '{"Cart":[{"productId": "' + productId +'"}]}';
+    	setCookie("kundalini_cart_list", jsonStr, 1);
+    }
+    
+    alert(user);
+
 }
 
-/*function addOrRemoveFromJSONCartList (jsonCartList, addOrRemove) {}
-		var jsonStr = '{"theTeam":[{"teamId":"1","status":"pending"},{"teamId":"2","status":"member"},{"teamId":"3","status":"member"}]}';
-		
-		var obj = JSON.parse(jsonStr);
-		obj['theTeam'].push({"teamId":"4","status":"pending"});
-		jsonStr = JSON.stringify(obj);
-		https://stackoverflow.com/questions/18884840/adding-a-new-array-element-to-a-json-object
-}
-*/
 
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
@@ -191,15 +394,6 @@ function getCookie(cname) {
         }
     }
     return "";
-}
-
-function checkCookie() {
-    var user=getCookie("kundalini");
-    if (user != "") {
-        alert("Welcome again " + user);
-    } else {
-        setCookie("kundalini", "content", 1);
-    }
 }
 
 doc.on('ready', init);
