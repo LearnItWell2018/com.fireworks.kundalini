@@ -1,6 +1,6 @@
-/*function init() {
+function init() {
 	 alert("Added in Cart");
-}*/
+}
 function removeFromCart() {
  alert("item removed from cart.");
 }
@@ -62,15 +62,15 @@ var init = function() {
  for (var i = 0; i < itemList.itemTypeList.length; i++) {
   var item = itemList.itemTypeList[i];
   console.log(item.item_name);
-  addTypeItem(document.getElementById("item_List"), item.item_price);
+  addTypeItem(document.getElementById("cart_items"), item.item_price);
  }
- /*var myJSON = JSON.stringify(itemList);
- console.log(myJSON);*/
 };
 
 function addTypeItem(element, priceTag) {
- var nodeDiv = document.createElement("div");
- var nodeButton = document.createElement("button");
+ var nodeDivLevel1 = document.createElement("div");
+ var nodeDivLevel21 = document.createElement("div");
+ var nodeDivLevel22 = document.createElement("div");
+ var removeCartButton = document.createElement("button");
  var nodePrice = document.createElement("i");
  var nodeCart = document.createElement("i");
  var image = document.createElement("img");
@@ -78,15 +78,13 @@ function addTypeItem(element, priceTag) {
  var textPrice = document.createTextNode(priceTag);
  /*var attDiv = document.createAttribute("class");
  attDiv.value = "rcorners";*/
- var itemDiv = document.createAttribute("class");
- itemDiv.value = "item";
- itemDiv.id = "item_List";
- itemDiv.appendChild(nodeDiv);
+ var attItemDiv = document.createAttribute("class");
+ attItemDiv.value = "item";
+ nodeDivLevel1.setAttributeNode(attItemDiv);
  
- var itemDelDiv = document.createAttribute("class");
- itemDelDiv.value = "fa fa-cart-arrow-down";
- itemDelDiv.type = "button";
- itemDelDiv.name= "btn";
+ var attRemoveCartButton = document.createAttribute("class");
+ attRemoveCartButton.value = "fa fa-cart-arrow-down";
+ removeCartButton.setAttributeNode(attRemoveCartButton);
  
  var itemPrice = document.createAttribute("class");
  itemPrice.value = "fa fa-inr";
@@ -116,23 +114,16 @@ function addTypeItem(element, priceTag) {
  likeOnClick.value = "likeItem()";
  
  var itemImageSource = document.createAttribute("src");
- itemImageSource.value = "../img/items/butterfly.PNG";
+ itemImageSource.value = "/kundalini/img/items/butterfly.PNG";
+ image.setAttributeNode(itemImageSource);
  
- var itemImageSize = document.createAttribute("class");
- itemImageSize.value = "image";
- 
- nodeDiv.setAttributeNode(itemDiv);
- nodeButton.setAttributeNode(itemDelDiv);
- /*image.setAttributeNode(attImageSource);
- image.setAttributeNode(attImageSize);
- nodeButton.setAttributeNode(attCart);
- nodeButton.setAttributeNode(attOnClick);
- nodeDiv.setAttributeNode(attDiv);
- nodePrice.setAttributeNode(attPrice);
- nodePrice.appendChild(textPrice);
- nodeDiv.appendChild(image);
- nodeDiv.appendChild(textnode);
- nodeDiv.appendChild(nodePrice);
- nodeDiv.appendChild(nodeButton);
- element.appendChild(nodeDiv);*/
+ var attItemImage = document.createAttribute("class");
+ attItemImage.value = "image";
+ nodeDivLevel22.setAttributeNode(attItemImage);
+
+ nodeDivLevel22.appendChild(image);
+ nodeDivLevel21.appendChild(removeCartButton);
+ nodeDivLevel1.appendChild(nodeDivLevel21);
+ nodeDivLevel1.appendChild(nodeDivLevel22);
+ element.appendChild(nodeDivLevel1);
 }
