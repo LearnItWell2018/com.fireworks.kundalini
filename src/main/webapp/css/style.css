@@ -12,7 +12,7 @@ html, body {
 }
 
 .bg {
-  background: url("../img/background_menu_o.jpg") no-repeat center center fixed;
+  background: url("/kundalini/img/background_menu_o.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -137,7 +137,7 @@ function addTypeItem (element, priceTag) {
 	  var attOnClick = document.createAttribute("onclick");
 	  attOnClick.value = "addToCart()";
 	  var attImageSource = document.createAttribute("src");
-	  attImageSource.value = "../img/items/butterfly.PNG";
+	  attImageSource.value = "/kundalini/img/items/butterfly.PNG";
 	  var attImageSize = document.createAttribute("class");
 	  attImageSize.value = "image";
 	  image.setAttributeNode(attImageSource);
@@ -155,7 +155,9 @@ function addTypeItem (element, priceTag) {
 }
 
 function addToCart() {
-	alert("Added in Cart");
+	setCookie("kundalini", "content", 1);
+	alert("kundalini is set");
+	alert(getCookie("kundalini"));
 }
 
 /*function addOrRemoveFromJSONCartList (jsonCartList, addOrRemove) {}
@@ -196,7 +198,7 @@ function checkCookie() {
     if (user != "") {
         alert("Welcome again " + user);
     } else {
-        setCookie("kundalini", user, 1);
+        setCookie("kundalini", "content", 1);
     }
 }
 

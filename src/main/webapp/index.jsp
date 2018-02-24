@@ -1,5 +1,8 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+	<h2>Kundalini FireWorks</h2>
+	<%
+		response.sendRedirect("html/main.html");
+	%>
 </body>
 </html>
