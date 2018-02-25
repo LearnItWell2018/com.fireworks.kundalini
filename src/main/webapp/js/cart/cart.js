@@ -1,6 +1,6 @@
-function init() {
-	 alert("Added in Cart");
-}
+/*function init() {
+	 alert("Cart initilized");
+}*/
 function removeFromCart() {
  alert("item removed from cart.");
 }
@@ -58,7 +58,7 @@ var itemList = {
 
  ]
 };
-var init = function() {
+function init() {
  for (var i = 0; i < itemList.itemTypeList.length; i++) {
   var item = itemList.itemTypeList[i];
   console.log(item.item_name);
@@ -79,12 +79,12 @@ function addTypeItem(element, priceTag) {
  var minusCartButton = document.createElement("button");
  var nodePrice = document.createElement("i");
  var quantityInput = document.createElement("input");
- var nodeCart = document.createElement("i");
+// var nodeCart = document.createElement("i");
  var image = document.createElement("img");
  var textDescriptionnode = document.createTextNode("This is a paragraph.");
  var textPricenode = document.createTextNode(priceTag);
- /*var attDiv = document.createAttribute("class");
- attDiv.value = "rcorners";*/
+ var attDiv = document.createAttribute("class");
+ attDiv.value = "rcorners";
  var attItemDiv = document.createAttribute("class");
  attItemDiv.value = "item";
  nodeDivLevel1.setAttributeNode(attItemDiv);
@@ -93,32 +93,32 @@ function addTypeItem(element, priceTag) {
  attRemoveCartButton.value = "fa fa-cart-arrow-down";
  removeCartButton.setAttributeNode(attRemoveCartButton);
  
- var itemPrice = document.createAttribute("class");
- itemPrice.value = "fa fa-inr";
+// var itemPrice = document.createAttribute("class");
+// itemPrice.value = "fa fa-inr";
  
- var itemDescription = document.createAttribute("class");
- itemDescription.value = "description";
+// var itemDescription = document.createAttribute("class");
+// itemDescription.value = "description";
  
  var itemQuantity = document.createAttribute("class");
  itemQuantity.value = "quantity";
  
- var minusFromCart = document.createAttribute("class");
- minusFromCart.value = "fa fa-minus";
+// var minusFromCart = document.createAttribute("class");
+// minusFromCart.value = "fa fa-minus";
  
- /*var removeFromCart = document.createAttribute("class");
- removeFromCart.value = "fa fa-cart-arrow-down";*/
+ var removeFromCart = document.createAttribute("class");
+ removeFromCart.value = "fa fa-cart-arrow-down";
  
- var removeOnClick = document.createAttribute("onclick");
- removeOnClick.value = "removeFromCart()";
+// var removeOnClick = document.createAttribute("onclick");
+// removeOnClick.value = "removeFromCart()";
  
- var incrementOnClick = document.createAttribute("onclick");
- incrementOnClick.value = "incrementItem()";
+// var incrementOnClick = document.createAttribute("onclick");
+// incrementOnClick.value = "incrementItem()";
  
- var decrementOnClick = document.createAttribute("onclick");
- decrementOnClick.value = "decrementItem()";
+// var decrementOnClick = document.createAttribute("onclick");
+// decrementOnClick.value = "decrementItem()";
  
- var likeOnClick = document.createAttribute("onclick");
- likeOnClick.value = "likeItem()";
+// var likeOnClick = document.createAttribute("onclick");
+// likeOnClick.value = "likeItem()";
  
  var itemImageSource = document.createAttribute("src");
  itemImageSource.value = "/kundalini/img/items/butterfly.PNG";
@@ -131,7 +131,7 @@ function addTypeItem(element, priceTag) {
  var attDescription = document.createAttribute("class");
  attDescription.value = "description";
  nodeDivLevel31.setAttributeNode(attDescription);
- nodeDivLevel13.setAttributeNode(textDescriptionnode);
+ nodeDivLevel13.appendChild(textDescriptionnode);
 
  var attItemQuantity = document.createAttribute("class");
  attItemQuantity.value = "quantity";
@@ -155,7 +155,7 @@ function addTypeItem(element, priceTag) {
  var attnodePrice = document.createAttribute("class");
  attnodePrice.value = "fa fa-inr";
  nodePrice.setAttributeNode(attnodePrice);
- nodePrice.setAttributeNode(textPricenode);
+ nodePrice.appendChild(textPricenode);
  
  nodeDivLevel41.appendChild(plusCartButton);//plus button in quantity
  nodeDivLevel41.appendChild(quantityInput);//Item count in quantity
