@@ -57,8 +57,42 @@
 	display:block;
 	overflow:auto;
 }
+
+main {
+	    top: 20%;
+	  }
+	  .floating-menu {
+	    background: blue;
+	    padding: 5px;;
+	    width: 100px;
+	    height: 250px;
+	    z-index: 100;
+	    position: fixed;
+	    left: 80%;
+    	top: 20%;
+	  }
+	  .floating-menu a, 
+	  .floating-menu h3 {
+	    font-size: 0.9em;
+	    display: block;
+	    margin: 0 0.5em;
+	    color: white;
+	  }
 </style>
 </head>
+<main>
+	<nav class="floating-menu">
+		<h3>Quick Bar</h3>
+		<a href="/kundalini/html/main.html" class="fa fa-home"
+			style="font-size: 48px; color: white"></a> <a
+			href="/kundalini/html/details.html" class="fa fa-server"
+			style="font-size: 48px; color: yellow"></a> <a
+			href="/kundalini/html/cart.html" class="fa fa-shopping-cart"
+			style="font-size: 48px; color: green"></a> <a
+			href="/kundalini/html/whyus.html" class="fa fa-question-circle-o"
+			style="font-size: 48px; color: red"></a>
+	</nav>
+</main>
 <body>
 <div class="fillit">
 	<div class="move-right right singleDiv" style="text-align:center;font-size:48px">7 days delivery<i class="fa fa-space-shuttle" style="font-size:48px;color:black"></i></div>
