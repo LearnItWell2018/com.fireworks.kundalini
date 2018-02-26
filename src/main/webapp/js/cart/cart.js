@@ -58,6 +58,9 @@ var itemList = {
 
  ]
 };
+
+
+
 function init() {
  for (var i = 0; i < itemList.itemTypeList.length; i++) {
   var item = itemList.itemTypeList[i];
@@ -68,6 +71,7 @@ function init() {
 
 function addTypeItem(element, priceTag) {
  var nodeDivLevel1 = document.createElement("div");
+ var nodeDivLevel12 = document.createElement("div");
  var nodeDivLevel21 = document.createElement("div");
  var nodeDivLevel22 = document.createElement("div");
  var nodeDivLevel31 = document.createElement("div");
@@ -79,7 +83,6 @@ function addTypeItem(element, priceTag) {
  var minusCartButton = document.createElement("button");
  var nodePrice = document.createElement("i");
  var quantityInput = document.createElement("input");
-// var nodeCart = document.createElement("i");
  var image = document.createElement("img");
  var textDescriptionnode = document.createTextNode("This is a paragraph.");
  var textPricenode = document.createTextNode(priceTag);
@@ -93,32 +96,12 @@ function addTypeItem(element, priceTag) {
  attRemoveCartButton.value = "fa fa-cart-arrow-down";
  removeCartButton.setAttributeNode(attRemoveCartButton);
  
-// var itemPrice = document.createAttribute("class");
-// itemPrice.value = "fa fa-inr";
- 
-// var itemDescription = document.createAttribute("class");
-// itemDescription.value = "description";
+ var attRemoveCartOnClick = document.createAttribute("onclick");
+ attRemoveCartOnClick.value = "removeItemFromCart()";
+ removeCartButton.setAttributeNode(attRemoveCartOnClick);
  
  var itemQuantity = document.createAttribute("class");
  itemQuantity.value = "quantity";
- 
-// var minusFromCart = document.createAttribute("class");
-// minusFromCart.value = "fa fa-minus";
- 
- var removeFromCart = document.createAttribute("class");
- removeFromCart.value = "fa fa-cart-arrow-down";
- 
-// var removeOnClick = document.createAttribute("onclick");
-// removeOnClick.value = "removeFromCart()";
- 
-// var incrementOnClick = document.createAttribute("onclick");
-// incrementOnClick.value = "incrementItem()";
- 
-// var decrementOnClick = document.createAttribute("onclick");
-// decrementOnClick.value = "decrementItem()";
- 
-// var likeOnClick = document.createAttribute("onclick");
-// likeOnClick.value = "likeItem()";
  
  var itemImageSource = document.createAttribute("src");
  itemImageSource.value = "/kundalini/img/items/butterfly.PNG";
@@ -141,9 +124,15 @@ function addTypeItem(element, priceTag) {
  attPlusCartButton.value = "fa fa-plus";
  plusCartButton.setAttributeNode(attPlusCartButton);
  
+ 
+ 
  var attMinusCartButton = document.createAttribute("class");
  attMinusCartButton.value = "fa fa-minus";
  minusCartButton.setAttributeNode(attMinusCartButton);
+ 
+ var attminusCartButtonOnClick = document.createAttribute("onclick");
+ attminusCartButtonOnClick.value = "minusItemCount()";
+ minusCartButton.setAttributeNode(attminusCartButtonOnClick);
  
  var attquantityInput = document.createAttribute("type");
  attquantityInput.value = "text";
@@ -152,10 +141,18 @@ function addTypeItem(element, priceTag) {
  quantityInput.setAttributeNode(attquantityInput);
  quantityInput.setAttributeNode(attquantityInputValue);
  
+ var attPlusCartButtonOnClick = document.createAttribute("onclick");
+ attPlusCartButtonOnClick.value = "plusItemCount()";
+ plusCartButton.setAttributeNode(attPlusCartButtonOnClick);
+ 
  var attnodePrice = document.createAttribute("class");
  attnodePrice.value = "fa fa-inr";
  nodePrice.setAttributeNode(attnodePrice);
  nodePrice.appendChild(textPricenode);
+ 
+ var attLike = document.createAttribute("class");
+ attLike.value = "fa fa-heart-o";
+ nodeDivLevel12.setAttributeNode(attLike);
  
  nodeDivLevel41.appendChild(plusCartButton);//plus button in quantity
  nodeDivLevel41.appendChild(quantityInput);//Item count in quantity
@@ -164,6 +161,7 @@ function addTypeItem(element, priceTag) {
  nodeDivLevel31.appendChild(nodeDivLevel13);//span in third div first of 3rd.
  nodeDivLevel22.appendChild(image);
  nodeDivLevel21.appendChild(removeCartButton);//Button in nodeDivLevel1
+ nodeDivLevel1.appendChild(nodeDivLevel12);
  nodeDivLevel1.appendChild(nodeDivLevel21);//Div in Div with class item 
  nodeDivLevel1.appendChild(nodeDivLevel22);//image set in main div
  nodeDivLevel1.appendChild(nodeDivLevel31);//Description tag added in main div
@@ -171,3 +169,40 @@ function addTypeItem(element, priceTag) {
  nodeDivLevel1.appendChild(nodeDivLevel51);//div 5 added in main div
  element.appendChild(nodeDivLevel1);//Main Div with class item 
 }
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function plusItemCount() {
+	alert("count incresed");
+	}
+
+var j=i;
+function minusItemCount() {
+	alert("count decresed");
+	
+	}
+
+function removeItemFromCart() {
+	alert("Item removed from cart");
+	}
