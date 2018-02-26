@@ -1,51 +1,75 @@
 <html>
 <head>
 <link rel="stylesheet" href="/kundalini/css/cart/cart.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="/kundalini/js/cart/cart.js"></script>
 <script src="/kundalini/js/jquery.min.js"></script>
 <title>Fireworks | cart</title>
 <style type="text/css">
-    
-	  main {
-	    top: 20%;
-	  }
-	  .floating-menu {
-	    background: blue;
-	    padding: 5px;;
-	    width: 100px;
-	    height: 250px;
-	    z-index: 100;
-	    position: fixed;
-	    left: 80%;
-    	top: 20%;
-	  }
-	  .floating-menu a, 
-	  .floating-menu h3 {
-	    font-size: 0.9em;
-	    display: block;
-	    margin: 0 0.5em;
-	    color: white;
-	  }
-    </style>
+main {
+	top: 20%;
+}
+
+.floating-menu {
+	background: blue;
+	padding: 5px;;
+	width: 100px;
+	height: 250px;
+	z-index: 100;
+	position: fixed;
+	left: 80%;
+	top: 20%;
+}
+
+.floating-menu a, .floating-menu h3 {
+	font-size: 0.9em;
+	display: block;
+	margin: 0 0.5em;
+	color: white;
+}
+</style>
+<style type="text/css">
+main {
+	top: 20%;
+}
+
+.floating-menu {
+	background: blue;
+	padding: 5px;;
+	width: 100px;
+	height: 250px;
+	z-index: 100;
+	position: fixed;
+	left: 80%;
+	top: 20%;
+}
+
+.floating-menu a, .floating-menu h3 {
+	font-size: 0.9em;
+	display: block;
+	margin: 0 0.5em;
+	color: white;
+}
+</style>
 </head>
 <main>
-	<nav class="floating-menu">
-		<h3>Quick Bar</h3>
-		<a href="/kundalini/html/main.html" class="fa fa-home"
-			style="font-size: 48px; color: white"></a> <a
-			href="/kundalini/html/details.html" class="fa fa-server"
-			style="font-size: 48px; color: yellow"></a> <a
-			href="/kundalini/html/cart.html" class="fa fa-shopping-cart"
-			style="font-size: 48px; color: green"></a> <a
-			href="/kundalini/html/whyus.html" class="fa fa-question-circle-o"
-			style="font-size: 48px; color: red"></a>
-	</nav>
+<nav class="floating-menu">
+	<h3>Quick Bar</h3>
+	<a href="/kundalini/html/main.html" class="fa fa-home"
+		style="font-size: 48px; color: white"></a> <a
+		href="/kundalini/html/details.html" class="fa fa-server"
+		style="font-size: 48px; color: yellow"></a> <a
+		href="/kundalini/html/cart.html" class="fa fa-shopping-cart"
+		style="font-size: 48px; color: green"></a> <a
+		href="/kundalini/html/whyus.html" class="fa fa-question-circle-o"
+		style="font-size: 48px; color: red"></a>
+</nav>
 </main>
 <body onload="init()">
 	<div id="cart_items" class="shopping-cart">
 		<div class="title">Shopping Bag</div>
 		<div id="cart_list" class="Iteminner"></div>
-		</div>
+	</div>
 </body>
 </html>
