@@ -82,7 +82,6 @@ function addTypeItem(element, priceTag) {
  var plusCartButton = document.createElement("button");
  var minusCartButton = document.createElement("button");
  var nodePrice = document.createElement("i");
- var quantityInput = document.createElement("input");
  var image = document.createElement("img");
  var textDescriptionnode = document.createTextNode("This is a paragraph.");
  var textPricenode = document.createTextNode(priceTag);
@@ -136,11 +135,6 @@ function addTypeItem(element, priceTag) {
  
  var attquantityInput = document.createAttribute("type");
  attquantityInput.value = "text";
- attquantityInputValue = document.createAttribute("value");
- attquantityInputValue.value = "1";
- quantityInput.setAttributeNode(attquantityInput);
- quantityInput.setAttributeNode(attquantityInputValue);
- 
  var attPlusCartButtonOnClick = document.createAttribute("onclick");
  attPlusCartButtonOnClick.value = "plusItemCount()";
  plusCartButton.setAttributeNode(attPlusCartButtonOnClick);
@@ -155,7 +149,6 @@ function addTypeItem(element, priceTag) {
  nodeDivLevel12.setAttributeNode(attLike);
  
  nodeDivLevel41.appendChild(plusCartButton);//plus button in quantity
- nodeDivLevel41.appendChild(quantityInput);//Item count in quantity
  nodeDivLevel41.appendChild(minusCartButton);//minus button in quantity
  nodeDivLevel51.appendChild(nodePrice);//inr icon added in div 5.
  nodeDivLevel31.appendChild(nodeDivLevel13);//span in third div first of 3rd.
@@ -197,7 +190,6 @@ function plusItemCount() {
 	alert("count incresed");
 	}
 
-var j=i;
 function minusItemCount() {
 	alert("count decresed");
 	
